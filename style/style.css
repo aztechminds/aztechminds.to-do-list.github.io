@@ -1,0 +1,117 @@
+/* Schritt 2: Allgemeines Styling für die gesamte Seite */
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Schritt 3: Styling für den App-Container */
+.todo-app {
+    max-width: 900px;
+    width: 90%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba (0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Schritt 4: Styling für die Hauptüberschrift */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Schritt 5: Styling für das Formular */
+.todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+ }
+
+.todo-input{
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+ }
+    .todo-input[aria-label="Neue Aufgaben hinzufügen"] {}
+ 
+ .todo-button{
+     background-color: #0078df;
+     color: #ffffff;
+     font-weight: bold;
+     border-radius: 5px;
+     cursor: pointer;
+     padding: 10px 20px;
+     border: none;
+    }
+    .todo-button[aria-label="Aufgabe Hinzufügen"] {}
+    
+ .todo-button:hover{
+    background-color: #005bb5;
+ }
+
+ /* Schritt 6: Styling für die Aufgabenliste */
+
+ .todo-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+
+ .todo-item{
+    display: flex;
+    gap: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+ }
+ .todo-checkbox{
+    margin-right: 10px;
+ }
+    .todo-checkbox[aria-label="Aufgabe erledigen"] {}
+
+ .todo-text {
+    font-size: 1rem;
+}
+.todo-checkbox:checked + .todo-text{
+    text-decoration: line-through;
+}
+.todo-dltbutton{
+    background-color: #d9534f;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+}
+.todo-dltbutton:hover {
+    background-color: #c9302c;
+}
+    .todo-dltbutton[aria-label="Aufgabe löschen"] {}
+
+/* Schritt 7: Styling für den Infobereich */
+.todo-info{
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666666;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+ 
