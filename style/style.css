@@ -34,40 +34,38 @@ h1 {
     gap: 10px;
     margin-bottom: 20px;
     width: 100%;
- }
+}
 
-.todo-input{
+.todo-input {
     height: 40px;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px 20px;
- }
-    .todo-input[aria-label="Neue Aufgaben hinzufügen"] {}
- 
- .todo-button{
-     background-color: #0078df;
-     color: #ffffff;
-     font-weight: bold;
-     border-radius: 5px;
-     cursor: pointer;
-     padding: 10px 20px;
-     border: none;
-    }
-    .todo-button[aria-label="Aufgabe Hinzufügen"] {}
-    
- .todo-button:hover{
+}
+
+.todo-button {
+    background-color: #0078df;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+}
+
+.todo-button:hover {
     background-color: #005bb5;
- }
+}
 
- /* Schritt 6: Styling für die Aufgabenliste */
+/* Schritt 6: Styling für die Aufgabenliste */
 
- .todo-list{
+.todo-list {
     list-style: none;
     padding: 0;
     margin: 0;
- }
+}
 
- .todo-item{
+.todo-item {
     display: flex;
     gap: 10px;
     background-color: #f9f9f9;
@@ -75,19 +73,21 @@ h1 {
     padding: 10px;
     margin-bottom: 10px;
     align-items: center;
- }
- .todo-checkbox{
-    margin-right: 10px;
- }
-    .todo-checkbox[aria-label="Aufgabe erledigen"] {}
+}
 
- .todo-text {
+.todo-checkbox {
+    margin-right: 10px;
+}
+
+.todo-text {
     font-size: 1rem;
 }
-.todo-checkbox:checked + .todo-text{
+
+.todo-checkbox:checked+.todo-text {
     text-decoration: line-through;
 }
-.todo-dltbutton{
+
+.todo-dltbutton {
     background-color: #d9534f;
     color: #ffffff;
     font-weight: bold;
@@ -96,22 +96,15 @@ h1 {
     cursor: pointer;
     border: none;
 }
+
 .todo-dltbutton:hover {
     background-color: #c9302c;
 }
-    .todo-dltbutton[aria-label="Aufgabe löschen"] {}
 
 /* Schritt 7: Styling für den Infobereich */
-.todo-info{
+.todo-info {
     text-align: center;
     font-size: 0.9rem;
     color: #666666;
     margin-top: 20px;
 }
-
-
-
-
-
-
- 
