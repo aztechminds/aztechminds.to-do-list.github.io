@@ -41,6 +41,7 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px 20px;
+    width: 80%;
 }
 
 .todo-button {
@@ -60,9 +61,14 @@ h1 {
 /* Schritt 6: Styling für die Aufgabenliste */
 
 .todo-list {
+    display: none;
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.todo-list.visible {
+    display: block;
 }
 
 .todo-item {
@@ -81,6 +87,7 @@ h1 {
 
 .todo-text {
     font-size: 1rem;
+    flex-grow: 1;
 }
 
 .todo-checkbox:checked+.todo-text {

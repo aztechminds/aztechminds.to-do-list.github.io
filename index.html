@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-App</title>
     <link rel="stylesheet" href="./style/style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <h1>Meine To-Do-Liste</h1>
     <div class todo-app>
+        <h1>Meine To-Do-Liste</h1>
         <form class="todo-form" action="">
             <input type="text" class="todo-input" placeholder="Neue Aufgabe hinzufügen" required
                 aria-label="Neue Aufgabe Hinzufügen">
@@ -21,15 +22,7 @@
             <!-- li Elemente durch JavaScript wird hinzugefügt -->
             <li class="todo-item">
                 <input type="checkbox" class="todo-checkbox" aria-label="Aufgabe erledigen" />
-                <span class="todo-text">Beispeilaufgaben Text</span>
-                <button class="todo-dltbutton" aria-label="Aufgabe Löschen">Löschen</button>
-            </li>
-        </ul>
-        <ul class="todo-list">
-            <!-- li Elemente durch JavaScript wird hinzugefügt -->
-            <li class="todo-item">
-                <input type="checkbox" class="todo-checkbox" aria-label="Aufgabe erledigen" />
-                <span class="todo-text">Beispeilaufgaben Text</span>
+                <span class="todo-text"></span>
                 <button class="todo-dltbutton" aria-label="Aufgabe Löschen">Löschen</button>
             </li>
         </ul>
