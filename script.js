@@ -7,6 +7,19 @@ const todoForm = document.querySelector('.todo-form');
 const todoInput = document.querySelector('.todo-input');
 const todoList = document.querySelector('.todo-list');
 
+// **Hole das Info-Element aus dem DOM** (NEU HINZUGEFÜGT)
+const todoInfo = document.querySelector('.todo-info p');
+
+// **Funktion zum Aktualisieren der offenen Aufgaben-Anzeige** (NEU HINZUGEFÜGT)
+function updateTodoInfo() {
+    // Zähle die offenen Aufgaben
+    const openTasksCount = todos.filter(todo => !todo.completed).length;
+    // Aktualisiere die Anzeige
+    todoInfo.textContent = openTasksCount > 0
+        ? `Offene Aufgaben: ${openTasksCount}`
+        : 'Keine offenen Aufgaben!';
+}
+
 // Event-Listener für das Formular, um eine neue Aufgabe hinzuzufügen
 todoForm.addEventListener('submit', function (event) {
     // Verhindere das Standardverhalten des Formulars (Seite neu laden)
@@ -36,6 +49,9 @@ todoForm.addEventListener('submit', function (event) {
 
     // Rendere die Liste der Aufgaben neu, um die aktuelle Aufgabe anzuzeigen
     renderTodos();
+
+    // **Aktualisiere die offenen Aufgaben-Anzeige** (NEU HINZUGEFÜGT)
+    updateTodoInfo();
 });
 
 // Funktion zum Rendern der To-Dos
@@ -69,6 +85,8 @@ function renderTodos() {
             todo.completed = checkbox.checked;
             // Rendere die Todos neu, um die Änderung zu reflektieren
             renderTodos();
+            // **Aktualisiere die offenen Aufgaben-Anzeige** (NEU HINZUGEFÜGT)
+            updateTodoInfo();
         });
 
         // Erstelle das <span>-Element für den Text der Aufgabe (Referenz des Texts ändert sich nicht, daher 'const')
@@ -92,6 +110,8 @@ function renderTodos() {
             todos = todos.filter(task => task.id !== todo.id);
             // Rendere die Todos neu, um die gelöschte Aufgabe zu entfernen
             renderTodos();
+            // **Aktualisiere die offenen Aufgaben-Anzeige** (NEU HINZUGEFÜGT)
+            updateTodoInfo();
         });
 
         // Füge die Checkbox, den Text und den Löschen-Button zum <li>-Element hinzu
@@ -101,5 +121,9 @@ function renderTodos() {
 
         // Füge das <li>-Element zur Liste (ul) hinzu
         todoList.appendChild(li);
+
+
     });
 }
+
+
